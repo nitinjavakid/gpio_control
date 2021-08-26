@@ -1,0 +1,12 @@
+[Unit]
+Description=Gpio Control
+After=multi-user.target
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+Type=simple
+ExecStart=/home/pi/sandboxes/gpio_control/build/gpio_control
+Restart=always
+
+[Install]
+WantedBy=default.target
